@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "halderdiptam@dl.com",
+      "default": true
+    }
+  ],
+  "name": "halderdiptam@dl.com",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "59.0"
+}
