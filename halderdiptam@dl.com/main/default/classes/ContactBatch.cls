@@ -10,20 +10,20 @@ public class ContactBatch extends TimeToExtend {
     return Database.getQueryLocator([SELECT Id FROM Contact]);
   }
 
-  public override void Execute(
+  public override void execute(
     Database.BatchableContext bc,
     List<Sobject> scope
   ) {
   }
 
-  public override void Finish(Database.BatchableContext bc) {
+  public override void finish(Database.BatchableContext bc) {
     completed(JOB_NAME, bc);
   }
 
   /**
    * @Description : This is for the 1st class to be Scheduled
    */
-  public override void Execute(System.SchedulableContext SC) {
+  public override void execute(System.SchedulableContext SC) {
     completed(JOB_NAME, SC);
   }
 }

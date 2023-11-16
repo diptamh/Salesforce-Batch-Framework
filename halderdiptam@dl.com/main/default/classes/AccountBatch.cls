@@ -21,7 +21,7 @@ public class AccountBatch extends TimeToExtend {
      */
     return Database.getQueryLocator([SELECT Id FROM Account]);
   }
-  public override void Execute(
+  public override void execute(
     Database.BatchableContext bc,
     List<Sobject> scope
   ) {
@@ -30,7 +30,7 @@ public class AccountBatch extends TimeToExtend {
      */
   }
 
-  public override void Finish(Database.BatchableContext bc) {
+  public override void finish(Database.BatchableContext bc) {
     completed(JOB_NAME, bc);
   }
 
@@ -38,7 +38,7 @@ public class AccountBatch extends TimeToExtend {
    * @Description : Normal Scheduling
    */
 
-  public override void Execute(System.SchedulableContext SC) {
+  public override void execute(System.SchedulableContext SC) {
     /**
      * FIX: For the 1st Job this will be called form the Trigger to schedule the 1st job
      */
