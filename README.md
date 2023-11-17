@@ -4,8 +4,7 @@
 This Salesforce Batch Framework is designed to empower consultants and administrators to efficiently schedule and chain batch jobs written by developers. The framework follows a class design where the custom batch classes extend a base class, providing a structured and scalable solution.
 
 ## Class Design
-```
-
+```diff
 /**
 * @@ Description: For any class where this will be implemented extend the TimeToExtend class @@
 */
