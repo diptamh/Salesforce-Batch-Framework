@@ -1,24 +1,16 @@
+/**
+ * @Description : Example class for quick testing
+ */
+
 public class AccountBatch extends TimeToExtend {
-  /**
-   * @Constructor : FIX : Add what is the pourpose of this.
-   *                      I think this add to create Type class Instance
-   */
   public AccountBatch() {
   }
-
-  /**
-   * @Desciption : Used to run the classes from outside UI. Feature to be added later.
-   */
   public static final String JOB_NAME = AccountBatch.class.getName();
 
   /**
    * Desciption : Normal Batch Calling
    */
-
   public override Database.QueryLocator start(Database.BatchableContext bc) {
-    /**
-     * Here the Query Start Condition will go
-     */
     return Database.getQueryLocator([SELECT Id FROM Account]);
   }
   public override void execute(
@@ -35,17 +27,9 @@ public class AccountBatch extends TimeToExtend {
   }
 
   /**
-   * @Description : Normal Scheduling
+   * @Description : This is for the 1st class to be Scheduled
    */
-
   public override void execute(System.SchedulableContext SC) {
-    /**
-     * FIX: For the 1st Job this will be called form the Trigger to schedule the 1st job
-     */
-
-    /**
-     * Make the class to store the rest of the List of classes
-     */
     completed(JOB_NAME, SC);
   }
 }

@@ -1,3 +1,6 @@
+/**
+ * @Description : Example class for quick testing
+ */
 public class ContactBatch extends TimeToExtend {
   public ContactBatch() {
   }
@@ -14,6 +17,9 @@ public class ContactBatch extends TimeToExtend {
     Database.BatchableContext bc,
     List<Sobject> scope
   ) {
+    /**
+     * Here the Query Execute Condition will go
+     */
   }
 
   public override void finish(Database.BatchableContext bc) {
